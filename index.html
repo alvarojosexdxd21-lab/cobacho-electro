@@ -3,111 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobacho Electro - Reparaciones</title>
+    <title>Cobacho Electro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-b from-red-50 to-blue-50 text-slate-900 min-h-screen pb-12">
+<body class="bg-gradient-to-b from-red-50 to-blue-50 text-slate-900 min-h-screen p-6">
 
-    <header class="bg-white shadow-lg p-6 flex items-center justify-between mb-8 border-b-4 border-red-600">
+    <header class="bg-white rounded-3xl shadow-lg p-6 flex items-center justify-between mb-8">
         <div>
             <h1 class="text-4xl font-bold text-red-600">Cobacho Electro</h1>
-            <p class="text-blue-600 font-medium">Reparaciones de equipos electrónicos</p>
+            <p class="text-blue-600">Reparaciones de equipos electrónicos</p>
         </div>
         <div class="text-3xl text-blue-600">
             <i class="fas fa-tools"></i>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-6 text-slate-800">Publicaciones</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         
-        <h2 class="text-2xl font-bold mb-6 border-l-4 border-red-600 pl-3">Publicaciones Recientes</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-3xl shadow-md">
+            <div class="text-4xl mb-2">💻</div>
+            <h3 class="text-xl font-bold text-blue-800">Reparación de portátil</h3>
+            <p class="text-gray-600 mb-4">Cambio de pantalla y limpieza interna</p>
             
-            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                <div class="text-4xl mb-2">💻</div>
-                <h3 class="text-xl font-bold text-blue-800">Reparación de portátil</h3>
-                <p class="text-gray-600">Cambio de pantalla y limpieza interna</p>
-                <div class="mt-4 flex items-center text-gray-400 text-sm">
-                    <span class="mr-4"><i class="fas fa-heart text-red-500"></i> 1.2k</span>
-                    <span><i class="fas fa-comment"></i> 80</span>
+            <details class="bg-blue-50 rounded-xl overflow-hidden border border-blue-100">
+                <summary class="p-3 text-red-600 font-bold cursor-pointer hover:bg-blue-100 transition-colors list-none flex justify-between items-center">
+                    📖 VER GUÍA DE REPARACIÓN
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </summary>
+                <div class="p-4 text-sm space-y-2 border-t border-blue-100">
+                    <p><b>1.</b> Desatornillar la base y desconectar batería.</p>
+                    <p><b>2.</b> Retirar el bisel de la pantalla con una púa.</p>
+                    <p><b>3.</b> Sustituir panel LCD y reensamblar.</p>
                 </div>
-            </div>
+            </details>
 
-            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                <div class="text-4xl mb-2">📺</div>
-                <h3 class="text-xl font-bold text-blue-800">TV como nueva</h3>
-                <p class="text-gray-600">Reparación de retroiluminación LED</p>
-                <div class="mt-4 flex items-center text-gray-400 text-sm">
-                    <span class="mr-4"><i class="fas fa-heart text-red-500"></i> 950</span>
-                    <span><i class="fas fa-comment"></i> 45</span>
-                </div>
-            </div>
-
-            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                <div class="text-4xl mb-2">📱</div>
-                <h3 class="text-xl font-bold text-blue-800">Móvil reparado</h3>
-                <p class="text-gray-600">Cambio de batería y conector de carga</p>
-                <div class="mt-4 flex items-center text-gray-400 text-sm">
-                    <span class="mr-4"><i class="fas fa-heart text-red-500"></i> 2.1k</span>
-                    <span><i class="fas fa-comment"></i> 120</span>
-                </div>
-            </div>
-
-            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                <div class="text-4xl mb-2">📟</div>
-                <h3 class="text-xl font-bold text-blue-800">Tablet recuperada</h3>
-                <p class="text-gray-600">Sustitución de pantalla táctil</p>
-                <div class="mt-4 flex items-center text-gray-400 text-sm">
-                    <span class="mr-4"><i class="fas fa-heart text-red-500"></i> 800</span>
-                    <span><i class="fas fa-comment"></i> 30</span>
-                </div>
+            <div class="mt-4 flex items-center text-gray-400 text-sm">
+                <span class="mr-4 text-red-500 font-bold"><i class="fas fa-heart"></i> 1.2k</span>
+                <span><i class="fas fa-comment"></i> 80</span>
             </div>
         </div>
 
-        <section class="bg-white rounded-2xl shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-bold mb-6 text-center text-red-600 underline">Lista de Precios Estimados</h2>
-            <ul class="space-y-4">
-                <li class="flex justify-between items-center border-b pb-2">
-                    <span class="font-medium text-gray-700">Cambio de pantalla portátil</span>
-                    <span class="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full">79€</span>
-                </li>
-                <li class="flex justify-between items-center border-b pb-2">
-                    <span class="font-medium text-gray-700">Reparación TV LED</span>
-                    <span class="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full">99€</span>
-                </li>
-                <li class="flex justify-between items-center border-b pb-2">
-                    <span class="font-medium text-gray-700">Cambio batería móvil</span>
-                    <span class="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full">49€</span>
-                </li>
-                <li class="flex justify-between items-center border-b pb-2">
-                    <span class="font-medium text-gray-700">Pantalla tablet</span>
-                    <span class="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full">69€</span>
-                </li>
-            </ul>
-        </section>
+        <div class="bg-white p-6 rounded-3xl shadow-md">
+            <div class="text-4xl mb-2">📺</div>
+            <h3 class="text-xl font-bold text-blue-800">TV como nueva</h3>
+            <p class="text-gray-600 mb-4">Reparación de retroiluminación LED</p>
+            
+            <details class="bg-blue-50 rounded-xl overflow-hidden border border-blue-100">
+                <summary class="p-3 text-red-600 font-bold cursor-pointer hover:bg-blue-100 transition-colors list-none flex justify-between items-center">
+                    📖 VER GUÍA DE REPARACIÓN
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </summary>
+                <div class="p-4 text-sm space-y-2 border-t border-blue-100">
+                    <p><b>1.</b> Desmontar panel posterior y placas.</p>
+                    <p><b>2.</b> Levantar el panel LCD con ventosas.</p>
+                    <p><b>3.</b> Cambiar tiras LED fundidas por nuevas.</p>
+                </div>
+            </details>
 
-        <h2 class="text-2xl font-bold mb-6 border-l-4 border-red-600 pl-3">Vídeos del Taller</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="aspect-[9/16] bg-slate-800 rounded-lg flex items-center justify-center text-white flex-col p-4 text-center border-2 border-red-500">
-                <i class="fab fa-tiktok text-3xl mb-2"></i>
-                <span class="text-xs">Reparando portátil</span>
-            </div>
-            <div class="aspect-[9/16] bg-slate-800 rounded-lg flex items-center justify-center text-white flex-col p-4 text-center border-2 border-red-500">
-                <i class="fab fa-tiktok text-3xl mb-2"></i>
-                <span class="text-xs">Cambio pantalla móvil</span>
-            </div>
-            <div class="aspect-[9/16] bg-slate-800 rounded-lg flex items-center justify-center text-white flex-col p-4 text-center border-2 border-red-500">
-                <i class="fab fa-tiktok text-3xl mb-2"></i>
-                <span class="text-xs">Reparación TV</span>
+            <div class="mt-4 flex items-center text-gray-400 text-sm">
+                <span class="mr-4 text-red-500 font-bold"><i class="fas fa-heart"></i> 950</span>
+                <span><i class="fas fa-comment"></i> 45</span>
             </div>
         </div>
 
-    </main>
+        <div class="bg-white p-6 rounded-3xl shadow-md">
+            <div class="text-4xl mb-2">📱</div>
+            <h3 class="text-xl font-bold text-blue-800">Móvil reparado</h3>
+            <p class="text-gray-600 mb-4">Cambio de batería y conector de carga</p>
+            
+            <details class="bg-blue-50 rounded-xl overflow-hidden border border-blue-100">
+                <summary class="p-3 text-red-600 font-bold cursor-pointer hover:bg-blue-100 transition-colors list-none flex justify-between items-center">
+                    📖 VER GUÍA DE REPARACIÓN
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </summary>
+                <div class="p-4 text-sm space-y-2 border-t border-blue-100">
+                    <p><b>1.</b> Aplicar calor para ablandar adhesivo.</p>
+                    <p><b>2.</b> Desconectar flex de batería vieja.</p>
+                    <p><b>3.</b> Instalar repuesto y sellar con B-7000.</p>
+                </div>
+            </details>
 
-    <footer class="mt-12 text-center text-gray-500 text-sm">
-        &copy; 2024 Cobacho Electro - Todos los derechos reservados
-    </footer>
+            <div class="mt-4 flex items-center text-gray-400 text-sm">
+                <span class="mr-4 text-red-500 font-bold"><i class="fas fa-heart"></i> 2.1k</span>
+                <span><i class="fas fa-comment"></i> 120</span>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl shadow-md">
+            <div class="text-4xl mb-2">📟</div>
+            <h3 class="text-xl font-bold text-blue-800">Tablet recuperada</h3>
+            <p class="text-gray-600 mb-4">Sustitución de pantalla táctil</p>
+            
+            <details class="bg-blue-50 rounded-xl overflow-hidden border border-blue-100">
+                <summary class="p-3 text-red-600 font-bold cursor-pointer hover:bg-blue-100 transition-colors list-none flex justify-between items-center">
+                    📖 VER GUÍA DE REPARACIÓN
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </summary>
+                <div class="p-4 text-sm space-y-2 border-t border-blue-100">
+                    <p><b>1.</b> Separar táctil roto del chasis.</p>
+                    <p><b>2.</b> Limpiar conectores con alcohol isopropílico.</p>
+                    <p><b>3.</b> Probar nuevo táctil y fijar con prensa.</p>
+                </div>
+            </details>
+
+            <div class="mt-4 flex items-center text-gray-400 text-sm">
+                <span class="mr-4 text-red-500 font-bold"><i class="fas fa-heart"></i> 800</span>
+                <span><i class="fas fa-comment"></i> 30</span>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-6 text-slate-800">Lista de precios</h2>
+    <div class="bg-white rounded-3xl shadow-md p-6 mb-12">
+        <ul class="space-y-3">
+            <li class="flex items-center text-gray-700"><i class="fas fa-check text-blue-500 mr-2"></i> Cambio de pantalla portátil — 79€</li>
+            <li class="flex items-center text-gray-700"><i class="fas fa-check text-blue-500 mr-2"></i> Reparación TV LED — 99€</li>
+            <li class="flex items-center text-gray-700"><i class="fas fa-check text-blue-500 mr-2"></i> Cambio batería móvil — 49€</li>
+            <li class="flex items-center text-gray-700"><i class="fas fa-check text-blue-500 mr-2"></i> Pantalla tablet — 69€</li>
+        </ul>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-6 text-slate-800">Vídeos estilo TikTok</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-slate-900 rounded-2xl h-48 flex flex-col items-center justify-center text-white p-4">
+            <i class="fab fa-tiktok text-3xl mb-2"></i>
+            <span class="text-center text-sm font-bold tracking-tight">Reparando portátil</span>
+        </div>
+        <div class="bg-slate-900 rounded-2xl h-48 flex flex-col items-center justify-center text-white p-4">
+            <i class="fab fa-tiktok text-3xl mb-2"></i>
+            <span class="text-center text-sm font-bold tracking-tight">Cambio de pantalla móvil</span>
+        </div>
+        <div class="bg-slate-900 rounded-2xl h-48 flex flex-col items-center justify-center text-white p-4">
+            <i class="fab fa-tiktok text-3xl mb-2"></i>
+            <span class="text-center text-sm font-bold tracking-tight">Reparación de TV</span>
+        </div>
+    </div>
 
 </body>
 </html>
