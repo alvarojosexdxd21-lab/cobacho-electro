@@ -3,122 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobacho Electro - Manuales Técnicos</title>
+    <title>Cobacho Electro - Manuales Maestros</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-b from-red-50 to-blue-50 text-slate-900 min-h-screen p-6">
 
-    <header class="bg-white rounded-3xl shadow-lg p-6 flex items-center justify-between mb-8">
+    <header class="bg-white rounded-3xl shadow-lg p-6 flex items-center justify-between mb-8 border-b-4 border-red-600">
         <div>
             <h1 class="text-4xl font-bold text-red-600">Cobacho Electro</h1>
             <p class="text-blue-600 font-medium">Laboratorio Avanzado de Reparación</p>
         </div>
-        <div class="text-3xl text-blue-600">
+        <div class="text-4xl text-blue-600 animate-pulse">
             <i class="fas fa-microchip"></i>
         </div>
     </header>
 
-    <h2 class="text-2xl font-bold mb-6 text-slate-800">Publicaciones y Guías Detalladas</h2>
-    <div class="grid grid-cols-1 gap-8 mb-12">
+    <h2 class="text-2xl font-bold mb-6 text-slate-800 flex items-center gap-2">
+        <i class="fas fa-tools text-red-600"></i> Publicaciones y Manuales Completos
+    </h2>
+
+    <div class="grid grid-cols-1 gap-6 mb-12">
         
-        <div class="bg-white p-6 rounded-3xl shadow-md border-t-4 border-blue-500">
+        <div class="bg-white p-6 rounded-3xl shadow-md border-l-8 border-blue-500">
             <div class="flex items-center gap-4 mb-4">
                 <span class="text-5xl">💻</span>
                 <div>
-                    <h3 class="text-2xl font-bold text-blue-800">Reparación de Portátil (Pantalla y Térmico)</h3>
-                    <p class="text-gray-500 italic text-sm">Tiempo estimado: 45 min | Dificultad: Media</p>
+                    <h3 class="text-2xl font-bold text-blue-900">Reparación Maestra de Portátil</h3>
+                    <p class="text-gray-500 text-sm">Cambio de LCD y Re-pasting Térmico</p>
                 </div>
             </div>
-            
-            <details class="group bg-slate-50 rounded-2xl border border-slate-200">
-                <summary class="p-4 text-red-600 font-black cursor-pointer hover:bg-slate-100 transition-all list-none flex justify-between items-center">
-                    <span><i class="fas fa-book-open mr-2"></i> LEER MANUAL COMPLETO DE REPARACIÓN</span>
+            <details class="group bg-blue-50 rounded-2xl">
+                <summary class="p-4 text-red-600 font-black cursor-pointer list-none flex justify-between items-center uppercase tracking-tighter">
+                    <span><i class="fas fa-book-open mr-2"></i> Abrir Manual de 7 Pasos</span>
                     <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
                 </summary>
-                
-                <div class="p-6 border-t border-slate-200 space-y-6">
-                    <div>
-                        <h4 class="font-bold text-blue-700 uppercase text-xs mb-2 tracking-widest"><i class="fas fa-toolbox mr-1"></i> Herramientas Necesarias</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Destornillador Philips PH00</span>
-                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Púa de plástico</span>
-                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Alcohol Isopropílico</span>
-                        </div>
-                    </div>
-
-                    <div class="space-y-4">
-                        <div class="flex gap-4">
-                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">01</span>
-                            <p class="text-gray-700 font-medium"><b>Desmontaje de seguridad:</b> Retira todos los tornillos de la base. Usa la púa para soltar los clips laterales. **Importante:** Desconecta el conector de la batería antes de tocar cualquier componente interno para evitar cortocircuitos.</p>
-                        </div>
-                        <div class="flex gap-4 border-t pt-4">
-                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">02</span>
-                            <p class="text-gray-700 font-medium"><b>Mantenimiento Térmico:</b> Desmonta el disipador de cobre. Limpia la pasta térmica seca del procesador con alcohol isopropílico y aplica una gota del tamaño de un guisante de pasta nueva (tipo MX-4).</p>
-                        </div>
-                        <div class="flex gap-4 border-t pt-4">
-                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">03</span>
-                            <p class="text-gray-700 font-medium"><b>Sustitución de LCD:</b> Quita los embellecedores del marco de la pantalla. Desatornilla el panel dañado y desconecta el cable flex eDP de 30/40 pines. Conecta el nuevo panel y asegúralo con cinta Kapton.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl">
-                        <p class="text-sm text-yellow-800"><i class="fas fa-exclamation-triangle mr-2"></i><b>CONSEJO PRO:</b> Nunca fuerces el cable flex de la pantalla; es extremadamente frágil y si se dobla demasiado perderás la imagen permanentemente.</p>
-                    </div>
+                <div class="p-6 border-t border-blue-100 space-y-4 text-gray-700 bg-white rounded-b-2xl">
+                    <p><b>1. Desenergización:</b> Retirar tornillos de la base y desconectar el flex de la batería interna inmediatamente.</p>
+                    <p><b>2. Acceso al LCD:</b> Usar púas de plástico para separar el marco frontal de la pantalla sin quebrar los clips.</p>
+                    <p><b>3. Extracción de Panel:</b> Desatornillar el panel dañado y soltar el conector eDP de 30 pines con pinzas de punta fina.</p>
+                    <p><b>4. Limpieza de CPU:</b> Desmontar el disipador y limpiar la pasta térmica vieja con alcohol isopropílico al 99%.</p>
+                    <p><b>5. Re-pasting:</b> Aplicar una capa milimétrica de pasta térmica de alta conductividad (tipo Arctic MX-6).</p>
+                    <p><b>6. Test de Imagen:</b> Conectar el nuevo panel y realizar un encendido de prueba antes de sellar el marco.</p>
+                    <p><b>7. Cierre Técnico:</b> Reinstalar batería, cerrar chasis y verificar temperaturas de trabajo con software.</p>
                 </div>
             </details>
         </div>
 
-        <div class="bg-white p-6 rounded-3xl shadow-md border-t-4 border-red-500">
+        <div class="bg-white p-6 rounded-3xl shadow-md border-l-8 border-red-500">
+            <div class="flex items-center gap-4 mb-4">
+                <span class="text-5xl">📺</span>
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-900">Reparación de TV LED (Backlight)</h3>
+                    <p class="text-gray-500 text-sm">Solución al problema de "Pantalla Negra con Sonido"</p>
+                </div>
+            </div>
+            <details class="group bg-red-50 rounded-2xl">
+                <summary class="p-4 text-red-600 font-black cursor-pointer list-none flex justify-between items-center uppercase tracking-tighter">
+                    <span><i class="fas fa-book-open mr-2"></i> Abrir Manual de 7 Pasos</span>
+                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="p-6 border-t border-red-100 space-y-4 text-gray-700 bg-white rounded-b-2xl">
+                    <p><b>1. Apertura:</b> Colocar la TV boca abajo sobre una superficie suave y retirar la tapa trasera completa.</p>
+                    <p><b>2. Desconexión T-CON:</b> Retirar los cables planos que van al panel LCD con extremo cuidado de no doblarlos.</p>
+                    <p><b>3. Extracción de Marco:</b> Desatornillar el marco metálico que sujeta el cristal líquido (LCD).</p>
+                    <p><b>4. Manipulación LCD:</b> Usar ventosas industriales para levantar el cristal y dejar expuestos los difusores.</p>
+                    <p><b>5. Test de LEDs:</b> Usar un comprobador de tiras LED para identificar exactamente qué diodos están fundidos.</p>
+                    <p><b>6. Sustitución:</b> Retirar las tiras viejas y pegar las nuevas asegurando la conexión al voltaje de la fuente.</p>
+                    <p><b>7. Reensamblado:</b> Limpiar motas de polvo en los filtros y cerrar asegurando la presión uniforme del marco.</p>
+                </div>
+            </details>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl shadow-md border-l-8 border-green-500">
             <div class="flex items-center gap-4 mb-4">
                 <span class="text-5xl">📱</span>
                 <div>
-                    <h3 class="text-2xl font-bold text-blue-800">Sustitución de Batería Smartphone</h3>
-                    <p class="text-gray-500 italic text-sm">Tiempo estimado: 30 min | Dificultad: Fácil</p>
+                    <h3 class="text-2xl font-bold text-blue-900">Cirugía de Smartphone</h3>
+                    <p class="text-gray-500 text-sm">Cambio de batería y puerto de carga</p>
                 </div>
             </div>
-            
-            <details class="group bg-slate-50 rounded-2xl border border-slate-200">
-                <summary class="p-4 text-red-600 font-black cursor-pointer hover:bg-slate-100 transition-all list-none flex justify-between items-center">
-                    <span><i class="fas fa-book-open mr-2"></i> LEER MANUAL COMPLETO DE REPARACIÓN</span>
+            <details class="group bg-green-50 rounded-2xl">
+                <summary class="p-4 text-red-600 font-black cursor-pointer list-none flex justify-between items-center uppercase tracking-tighter">
+                    <span><i class="fas fa-book-open mr-2"></i> Abrir Manual de 7 Pasos</span>
                     <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
                 </summary>
-                
-                <div class="p-6 border-t border-slate-200 space-y-6">
-                    <div>
-                        <h4 class="font-bold text-blue-700 uppercase text-xs mb-2 tracking-widest"><i class="fas fa-toolbox mr-1"></i> Herramientas</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Pistola de calor / Decapador</span>
-                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Ventosa</span>
-                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Pegamento B-7000</span>
-                        </div>
-                    </div>
-
-                    <div class="space-y-4">
-                        <div class="flex gap-4">
-                            <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">01</span>
-                            <p class="text-gray-700 font-medium"><b>Apertura térmica:</b> Calienta los bordes de la tapa trasera a 80°C durante 2 minutos para ablandar el adhesivo de fábrica. Usa la ventosa para crear un hueco e inserta una púa plástica delgada.</p>
-                        </div>
-                        <div class="flex gap-4 border-t pt-4">
-                            <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">02</span>
-                            <p class="text-gray-700 font-medium"><b>Extracción segura:</b> Quita los tornillos del blindaje y desconecta el flex de la batería. Si la batería está pegada, usa unas gotas de alcohol isopropílico para disolver el pegamento inferior. **No uses herramientas de metal** (peligro de incendio).</p>
-                        </div>
-                        <div class="flex gap-4 border-t pt-4">
-                            <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">03</span>
-                            <p class="text-gray-700 font-medium"><b>Sellado:</b> Limpia el marco de restos antiguos. Aplica una capa fina de B-7000, coloca la tapa y mantén presión con pinzas durante al menos 1 hora.</p>
-                        </div>
-                    </div>
+                <div class="p-6 border-t border-green-100 space-y-4 text-gray-700 bg-white rounded-b-2xl">
+                    <p><b>1. Ablandamiento:</b> Aplicar calor (80°C) durante 3 minutos en la tapa trasera para soltar el adhesivo.</p>
+                    <p><b>2. Apertura Segura:</b> Insertar una púa fina y recorrer el perímetro evitando los flex de huella y pantalla.</p>
+                    <p><b>3. Blindajes:</b> Retirar los tornillos Philips o Torx que protegen la placa base y el puerto inferior.</p>
+                    <p><b>4. Desconexión:</b> Desconectar primero la batería y luego el flex de interconexión del puerto USB-C.</p>
+                    <p><b>5. Extracción Batería:</b> Tirar de las pestañas adhesivas (Pull-tabs) lentamente para no perforar la celda.</p>
+                    <p><b>6. Instalación:</b> Colocar los nuevos repuestos originales y verificar la carga rápida con un amperímetro.</p>
+                    <p><b>7. Sellado Final:</b> Aplicar adhesivo estructural B-7000, cerrar y dejar bajo presión de pinzas por 2 horas.</p>
                 </div>
             </details>
         </div>
 
     </div>
 
-    <h2 class="text-2xl font-bold mb-6 text-slate-800">Servicios</h2>
-    <div class="bg-white rounded-3xl shadow-md p-6 mb-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="flex justify-between p-2 border-b"><span>Pantalla Portátil</span><span class="font-bold text-red-600">79€</span></div>
-            <div class="flex justify-between p-2 border-b"><span>Batería Móvil</span><span class="font-bold text-red-600">49€</span></div>
+    <div class="bg-slate-900 text-white rounded-3xl p-8 shadow-xl">
+        <h2 class="text-2xl font-bold mb-6 border-b border-slate-700 pb-2">Tarifas de Referencia</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+            <div class="flex justify-between border-b border-slate-800 pb-1"><span>Pantalla Portátil</span><span class="text-red-500 font-bold">Desde 79€</span></div>
+            <div class="flex justify-between border-b border-slate-800 pb-1"><span>Reparación TV</span><span class="text-red-500 font-bold">Desde 99€</span></div>
+            <div class="flex justify-between border-b border-slate-800 pb-1"><span>Batería Móvil</span><span class="text-red-500 font-bold">Desde 49€</span></div>
+            <div class="flex justify-between border-b border-slate-800 pb-1"><span>Limpieza Térmica</span><span class="text-red-500 font-bold">Desde 35€</span></div>
         </div>
     </div>
 
