@@ -1,1 +1,60 @@
+export default function CobachoElectroSocialDemo() {
+  const posts = [
+    { title: 'Reparación de portátil', desc: 'Cambio de pantalla y limpieza interna', img: '💻' },
+    { title: 'TV como nueva', desc: 'Reparación de retroiluminación LED', img: '📺' },
+    { title: 'Móvil reparado', desc: 'Cambio de batería y conector de carga', img: '📱' },
+    { title: 'Tablet recuperada', desc: 'Sustitución de pantalla táctil', img: '📲' },
+  ];
+
+  const prices = [
+    'Cambio de pantalla portátil — 79€',
+    'Reparación TV LED — 99€',
+    'Cambio batería móvil — 49€',
+    'Pantalla tablet — 69€'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-red-50 to-blue-50 text-slate-900 p-6">
+      <header className="bg-white rounded-3xl shadow-lg p-6 flex items-center justify-between mb-8">
+        <div>
+          <h1 className="text-4xl font-bold text-red-600">Cobacho Electro</h1>
+          <p className="text-blue-600">Reparaciones de equipos electrónicos</p>
+        </div>
+      </header>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Publicaciones</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {posts.map((p, i) => (
+            <div key={i} className="bg-white rounded-3xl shadow-md p-5 hover:shadow-xl transition">
+              <div className="text-6xl mb-4">{p.img}</div>
+              <h2 className="text-xl font-semibold">{p.title}</h2>
+              <p className="text-gray-600">{p.desc}</p>
+              <div className="mt-4 flex justify-between text-sm text-gray-500">
+                <span>❤️ 1.{i+2}k</span>
+                <span>💬 {i+8}0</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-8 bg-white rounded-3xl shadow-lg p-6">
+        <h2 className="text-2xl font-bold mb-4">Lista de precios</h2>
+        <ul className="space-y-2">
+          {prices.map((price, i) => <li key={i}>{price}</li>)}
+        </ul>
+      </section>
+
+      <section className="bg-white rounded-3xl shadow-lg p-6">
+        <h2 className="text-2xl font-bold mb-4">Videos estilo TikTok</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="bg-slate-100 rounded-2xl h-64 flex items-center justify-center text-center">🎥 Reparando portátil</div>
+          <div className="bg-slate-100 rounded-2xl h-64 flex items-center justify-center text-center">🎥 Cambio de pantalla móvil</div>
+          <div className="bg-slate-100 rounded-2xl h-64 flex items-center justify-center text-center">🎥 Reparación de TV</div>
+        </div>
+      </section>
+    </div>
+  );
+}
 
