@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobacho Electro</title>
+    <title>Cobacho Electro - Manuales Técnicos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -12,132 +12,113 @@
     <header class="bg-white rounded-3xl shadow-lg p-6 flex items-center justify-between mb-8">
         <div>
             <h1 class="text-4xl font-bold text-red-600">Cobacho Electro</h1>
-            <p class="text-blue-600">Reparaciones de equipos electrónicos</p>
+            <p class="text-blue-600 font-medium">Laboratorio Avanzado de Reparación</p>
         </div>
         <div class="text-3xl text-blue-600">
-            <i class="fas fa-tools"></i>
+            <i class="fas fa-microchip"></i>
         </div>
     </header>
 
-    <h2 class="text-2xl font-bold mb-6 text-slate-800">Publicaciones</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+    <h2 class="text-2xl font-bold mb-6 text-slate-800">Publicaciones y Guías Detalladas</h2>
+    <div class="grid grid-cols-1 gap-8 mb-12">
         
-        <div class="bg-white p-6 rounded-3xl shadow-md">
-            <div class="text-4xl mb-2">💻</div>
-            <h3 class="text-xl font-bold text-blue-800">Reparación de portátil</h3>
-            <p class="text-gray-600 mb-4">Cambio de pantalla y limpieza interna</p>
+        <div class="bg-white p-6 rounded-3xl shadow-md border-t-4 border-blue-500">
+            <div class="flex items-center gap-4 mb-4">
+                <span class="text-5xl">💻</span>
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-800">Reparación de Portátil (Pantalla y Térmico)</h3>
+                    <p class="text-gray-500 italic text-sm">Tiempo estimado: 45 min | Dificultad: Media</p>
+                </div>
+            </div>
             
-            <details class="bg-blue-50 rounded-xl overflow-hidden border border-blue-100">
-                <summary class="p-3 text-red-600 font-bold cursor-pointer hover:bg-blue-100 transition-colors list-none flex justify-between items-center">
-                    📖 VER GUÍA DE REPARACIÓN
-                    <i class="fas fa-chevron-down text-xs"></i>
+            <details class="group bg-slate-50 rounded-2xl border border-slate-200">
+                <summary class="p-4 text-red-600 font-black cursor-pointer hover:bg-slate-100 transition-all list-none flex justify-between items-center">
+                    <span><i class="fas fa-book-open mr-2"></i> LEER MANUAL COMPLETO DE REPARACIÓN</span>
+                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
                 </summary>
-                <div class="p-4 text-sm space-y-2 border-t border-blue-100">
-                    <p><b>1.</b> Desatornillar la base y desconectar batería.</p>
-                    <p><b>2.</b> Retirar el bisel de la pantalla con una púa.</p>
-                    <p><b>3.</b> Sustituir panel LCD y reensamblar.</p>
+                
+                <div class="p-6 border-t border-slate-200 space-y-6">
+                    <div>
+                        <h4 class="font-bold text-blue-700 uppercase text-xs mb-2 tracking-widest"><i class="fas fa-toolbox mr-1"></i> Herramientas Necesarias</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Destornillador Philips PH00</span>
+                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Púa de plástico</span>
+                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Alcohol Isopropílico</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">01</span>
+                            <p class="text-gray-700 font-medium"><b>Desmontaje de seguridad:</b> Retira todos los tornillos de la base. Usa la púa para soltar los clips laterales. **Importante:** Desconecta el conector de la batería antes de tocar cualquier componente interno para evitar cortocircuitos.</p>
+                        </div>
+                        <div class="flex gap-4 border-t pt-4">
+                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">02</span>
+                            <p class="text-gray-700 font-medium"><b>Mantenimiento Térmico:</b> Desmonta el disipador de cobre. Limpia la pasta térmica seca del procesador con alcohol isopropílico y aplica una gota del tamaño de un guisante de pasta nueva (tipo MX-4).</p>
+                        </div>
+                        <div class="flex gap-4 border-t pt-4">
+                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">03</span>
+                            <p class="text-gray-700 font-medium"><b>Sustitución de LCD:</b> Quita los embellecedores del marco de la pantalla. Desatornilla el panel dañado y desconecta el cable flex eDP de 30/40 pines. Conecta el nuevo panel y asegúralo con cinta Kapton.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-xl">
+                        <p class="text-sm text-yellow-800"><i class="fas fa-exclamation-triangle mr-2"></i><b>CONSEJO PRO:</b> Nunca fuerces el cable flex de la pantalla; es extremadamente frágil y si se dobla demasiado perderás la imagen permanentemente.</p>
+                    </div>
                 </div>
             </details>
-
-            <div class="mt-4 flex items-center text-gray-400 text-sm">
-                <span class="mr-4 text-red-500 font-bold"><i class="fas fa-heart"></i> 1.2k</span>
-                <span><i class="fas fa-comment"></i> 80</span>
-            </div>
         </div>
 
-        <div class="bg-white p-6 rounded-3xl shadow-md">
-            <div class="text-4xl mb-2">📺</div>
-            <h3 class="text-xl font-bold text-blue-800">TV como nueva</h3>
-            <p class="text-gray-600 mb-4">Reparación de retroiluminación LED</p>
+        <div class="bg-white p-6 rounded-3xl shadow-md border-t-4 border-red-500">
+            <div class="flex items-center gap-4 mb-4">
+                <span class="text-5xl">📱</span>
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-800">Sustitución de Batería Smartphone</h3>
+                    <p class="text-gray-500 italic text-sm">Tiempo estimado: 30 min | Dificultad: Fácil</p>
+                </div>
+            </div>
             
-            <details class="bg-blue-50 rounded-xl overflow-hidden border border-blue-100">
-                <summary class="p-3 text-red-600 font-bold cursor-pointer hover:bg-blue-100 transition-colors list-none flex justify-between items-center">
-                    📖 VER GUÍA DE REPARACIÓN
-                    <i class="fas fa-chevron-down text-xs"></i>
+            <details class="group bg-slate-50 rounded-2xl border border-slate-200">
+                <summary class="p-4 text-red-600 font-black cursor-pointer hover:bg-slate-100 transition-all list-none flex justify-between items-center">
+                    <span><i class="fas fa-book-open mr-2"></i> LEER MANUAL COMPLETO DE REPARACIÓN</span>
+                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
                 </summary>
-                <div class="p-4 text-sm space-y-2 border-t border-blue-100">
-                    <p><b>1.</b> Desmontar panel posterior y placas.</p>
-                    <p><b>2.</b> Levantar el panel LCD con ventosas.</p>
-                    <p><b>3.</b> Cambiar tiras LED fundidas por nuevas.</p>
+                
+                <div class="p-6 border-t border-slate-200 space-y-6">
+                    <div>
+                        <h4 class="font-bold text-blue-700 uppercase text-xs mb-2 tracking-widest"><i class="fas fa-toolbox mr-1"></i> Herramientas</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Pistola de calor / Decapador</span>
+                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Ventosa</span>
+                            <span class="bg-white border px-2 py-1 rounded text-xs text-gray-600">Pegamento B-7000</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">01</span>
+                            <p class="text-gray-700 font-medium"><b>Apertura térmica:</b> Calienta los bordes de la tapa trasera a 80°C durante 2 minutos para ablandar el adhesivo de fábrica. Usa la ventosa para crear un hueco e inserta una púa plástica delgada.</p>
+                        </div>
+                        <div class="flex gap-4 border-t pt-4">
+                            <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">02</span>
+                            <p class="text-gray-700 font-medium"><b>Extracción segura:</b> Quita los tornillos del blindaje y desconecta el flex de la batería. Si la batería está pegada, usa unas gotas de alcohol isopropílico para disolver el pegamento inferior. **No uses herramientas de metal** (peligro de incendio).</p>
+                        </div>
+                        <div class="flex gap-4 border-t pt-4">
+                            <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs">03</span>
+                            <p class="text-gray-700 font-medium"><b>Sellado:</b> Limpia el marco de restos antiguos. Aplica una capa fina de B-7000, coloca la tapa y mantén presión con pinzas durante al menos 1 hora.</p>
+                        </div>
+                    </div>
                 </div>
             </details>
-
-            <div class="mt-4 flex items-center text-gray-400 text-sm">
-                <span class="mr-4 text-red-500 font-bold"><i class="fas fa-heart"></i> 950</span>
-                <span><i class="fas fa-comment"></i> 45</span>
-            </div>
         </div>
 
-        <div class="bg-white p-6 rounded-3xl shadow-md">
-            <div class="text-4xl mb-2">📱</div>
-            <h3 class="text-xl font-bold text-blue-800">Móvil reparado</h3>
-            <p class="text-gray-600 mb-4">Cambio de batería y conector de carga</p>
-            
-            <details class="bg-blue-50 rounded-xl overflow-hidden border border-blue-100">
-                <summary class="p-3 text-red-600 font-bold cursor-pointer hover:bg-blue-100 transition-colors list-none flex justify-between items-center">
-                    📖 VER GUÍA DE REPARACIÓN
-                    <i class="fas fa-chevron-down text-xs"></i>
-                </summary>
-                <div class="p-4 text-sm space-y-2 border-t border-blue-100">
-                    <p><b>1.</b> Aplicar calor para ablandar adhesivo.</p>
-                    <p><b>2.</b> Desconectar flex de batería vieja.</p>
-                    <p><b>3.</b> Instalar repuesto y sellar con B-7000.</p>
-                </div>
-            </details>
-
-            <div class="mt-4 flex items-center text-gray-400 text-sm">
-                <span class="mr-4 text-red-500 font-bold"><i class="fas fa-heart"></i> 2.1k</span>
-                <span><i class="fas fa-comment"></i> 120</span>
-            </div>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-md">
-            <div class="text-4xl mb-2">📟</div>
-            <h3 class="text-xl font-bold text-blue-800">Tablet recuperada</h3>
-            <p class="text-gray-600 mb-4">Sustitución de pantalla táctil</p>
-            
-            <details class="bg-blue-50 rounded-xl overflow-hidden border border-blue-100">
-                <summary class="p-3 text-red-600 font-bold cursor-pointer hover:bg-blue-100 transition-colors list-none flex justify-between items-center">
-                    📖 VER GUÍA DE REPARACIÓN
-                    <i class="fas fa-chevron-down text-xs"></i>
-                </summary>
-                <div class="p-4 text-sm space-y-2 border-t border-blue-100">
-                    <p><b>1.</b> Separar táctil roto del chasis.</p>
-                    <p><b>2.</b> Limpiar conectores con alcohol isopropílico.</p>
-                    <p><b>3.</b> Probar nuevo táctil y fijar con prensa.</p>
-                </div>
-            </details>
-
-            <div class="mt-4 flex items-center text-gray-400 text-sm">
-                <span class="mr-4 text-red-500 font-bold"><i class="fas fa-heart"></i> 800</span>
-                <span><i class="fas fa-comment"></i> 30</span>
-            </div>
-        </div>
     </div>
 
-    <h2 class="text-2xl font-bold mb-6 text-slate-800">Lista de precios</h2>
+    <h2 class="text-2xl font-bold mb-6 text-slate-800">Servicios</h2>
     <div class="bg-white rounded-3xl shadow-md p-6 mb-12">
-        <ul class="space-y-3">
-            <li class="flex items-center text-gray-700"><i class="fas fa-check text-blue-500 mr-2"></i> Cambio de pantalla portátil — 79€</li>
-            <li class="flex items-center text-gray-700"><i class="fas fa-check text-blue-500 mr-2"></i> Reparación TV LED — 99€</li>
-            <li class="flex items-center text-gray-700"><i class="fas fa-check text-blue-500 mr-2"></i> Cambio batería móvil — 49€</li>
-            <li class="flex items-center text-gray-700"><i class="fas fa-check text-blue-500 mr-2"></i> Pantalla tablet — 69€</li>
-        </ul>
-    </div>
-
-    <h2 class="text-2xl font-bold mb-6 text-slate-800">Vídeos estilo TikTok</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="bg-slate-900 rounded-2xl h-48 flex flex-col items-center justify-center text-white p-4">
-            <i class="fab fa-tiktok text-3xl mb-2"></i>
-            <span class="text-center text-sm font-bold tracking-tight">Reparando portátil</span>
-        </div>
-        <div class="bg-slate-900 rounded-2xl h-48 flex flex-col items-center justify-center text-white p-4">
-            <i class="fab fa-tiktok text-3xl mb-2"></i>
-            <span class="text-center text-sm font-bold tracking-tight">Cambio de pantalla móvil</span>
-        </div>
-        <div class="bg-slate-900 rounded-2xl h-48 flex flex-col items-center justify-center text-white p-4">
-            <i class="fab fa-tiktok text-3xl mb-2"></i>
-            <span class="text-center text-sm font-bold tracking-tight">Reparación de TV</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex justify-between p-2 border-b"><span>Pantalla Portátil</span><span class="font-bold text-red-600">79€</span></div>
+            <div class="flex justify-between p-2 border-b"><span>Batería Móvil</span><span class="font-bold text-red-600">49€</span></div>
         </div>
     </div>
 
