@@ -1,179 +1,94 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobacho Electro - Laboratorio Especializado</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body class="bg-gradient-to-b from-red-50 to-blue-50 text-slate-900 min-h-screen p-6 pb-20">
+export default function CobachoElectroSocialDemo() {
+  // 1. Trabajos Realizados vinculados a tus imágenes
+  // RECUERDA: Sube tus 4 fotos a la carpeta /public/images/
+  const posts = [
+    { 
+      title: 'Reparación de portátil', 
+      desc: 'Cambio de pantalla y limpieza interna', 
+      img: '/images/portatil.jpg' // Vinculado a image_1.png
+    },
+    { 
+      title: 'TV como nueva', 
+      desc: 'Reparación de retroiluminación LED', 
+      img: '/images/tv.jpg' // Vinculado a image_2.png
+    },
+    { 
+      title: 'Móvil reparado', 
+      desc: 'Cambio de batería y conector de carga', 
+      img: '/images/movil.jpg' // Vinculado a image_4.png (¡La nueva!)
+    },
+    { 
+      title: 'Tablet recuperada', 
+      desc: 'Sustitución de pantalla táctil', 
+      img: '/images/tablet.jpg' // Vinculado a image_3.png
+    },
+  ];
 
-    <header class="bg-white rounded-3xl shadow-lg p-6 flex items-center justify-between mb-8 border-b-4 border-red-600">
+  // 2. Lista de Precios Actualizada y Equilibrada
+  const prices = [
+    { service: 'Cambio de pantalla portátil', price: '79€' },
+    { service: 'Reparación TV LED', price: '99€' },
+    { service: 'Mano de obra Móvil (básico)', price: '45€' }, // Precio realista añadido
+    { service: 'Pantalla tablet', price: '69€' },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-red-50 to-blue-50 text-slate-900 p-6 md:p-10">
+      
+      {/* Cabecera con toque de color */}
+      <header className="bg-white rounded-3xl shadow-xl p-8 flex items-center justify-between mb-12 border-l-8 border-red-500">
         <div>
-            <h1 class="text-4xl font-bold text-red-600">Cobacho Electro</h1>
-            <p class="text-blue-600 font-medium text-sm">Laboratorio Avanzado de Reparación</p>
+          <h1 className="text-5xl font-black text-slate-950">Cobacho <span className="text-red-600">Electro</span></h1>
+          <p className="text-blue-700 text-xl font-medium mt-1">Reparaciones profesionales de electrónica en Córdoba</p>
         </div>
-        <div class="text-4xl text-blue-600 animate-pulse">
-            <i class="fas fa-microchip"></i>
-        </div>
-    </header>
+        {/* Aquí podrías añadir un botón de "Contactar" en el futuro */}
+      </header>
 
-    <h2 class="text-2xl font-bold mb-6 text-slate-800 flex items-center gap-2">
-        <i class="fas fa-tools text-red-600"></i> Publicaciones y Manuales
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      {/* Galería de Trabajos */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-slate-800 mb-8 pb-2 border-b-2 border-slate-200">Nuestros últimos trabajos</h2>
         
-        <div class="bg-white p-6 rounded-3xl shadow-md border-l-8 border-blue-500">
-            <div class="flex items-center gap-4 mb-4">
-                <span class="text-5xl">💻</span>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900">Portátiles</h3>
-                    <p class="text-gray-500 text-xs italic">Pantallas y Mantenimiento</p>
-                </div>
+        {/* Grid Responsive: Ajusta el número de columnas según la pantalla */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {posts.map((post, index) => (
+            <div key={index} className="bg-white rounded-3xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+              {/* Contenedor de la foto */}
+              <div className="h-56 overflow-hidden bg-slate-100">
+                <img 
+                  src={post.img} 
+                  alt={post.title} 
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+              {/* Contenido de texto */}
+              <div className="p-6">
+                <h3 className="font-extrabold text-2xl text-slate-950 mb-2">{post.title}</h3>
+                <p className="text-slate-600 text-base leading-relaxed">{post.desc}</p>
+              </div>
             </div>
-            <details class="group bg-blue-50 rounded-2xl">
-                <summary class="p-3 text-red-600 font-black cursor-pointer list-none flex justify-between items-center text-sm uppercase">
-                    <span><i class="fas fa-book-open mr-2"></i> VER PASO A PASO (7 PASOS)</span>
-                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <div class="p-4 border-t border-blue-100 space-y-2 text-gray-700 bg-white rounded-b-2xl text-xs">
-                    <p><b>1.</b> Desmontaje base. <b>2.</b> Desconexión batería. <b>3.</b> Retirada marco LCD. <b>4.</b> Limpieza térmica. <b>5.</b> Pasta MX-6. <b>6.</b> Test panel. <b>7.</b> Cierre técnico.</p>
-                </div>
-            </details>
+          ))}
         </div>
+      </section>
 
-        <div class="bg-white p-6 rounded-3xl shadow-md border-l-8 border-red-500">
-            <div class="flex items-center gap-4 mb-4">
-                <span class="text-5xl">📺</span>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900">Televisores LED</h3>
-                    <p class="text-gray-500 text-xs italic">Retroiluminación Backlight</p>
-                </div>
-            </div>
-            <details class="group bg-red-50 rounded-2xl">
-                <summary class="p-3 text-red-600 font-black cursor-pointer list-none flex justify-between items-center text-sm uppercase">
-                    <span><i class="fas fa-book-open mr-2"></i> VER PASO A PASO (7 PASOS)</span>
-                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <div class="p-4 border-t border-red-100 space-y-2 text-gray-700 bg-white rounded-b-2xl text-xs">
-                    <p><b>1.</b> Retirada tapa trasera. <b>2.</b> Desconexión T-CON. <b>3.</b> Extracción LCD ventosas. <b>4.</b> Retirada difusores. <b>5.</b> Test tiras LED. <b>6.</b> Cambio diodos. <b>7.</b> Reensamblado.</p>
-                </div>
-            </details>
+      {/* Sección de Precios */}
+      <section className="max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold text-slate-800 mb-8 pb-2 border-b-2 border-slate-200 text-center">Tabla de precios de referencia</h2>
+        
+        <div className="bg-white p-6 rounded-3xl shadow-inner border border-slate-100">
+          <div className="space-y-4">
+            {prices.map((item, index) => (
+              <div key={index} className={`flex justify-between items-center p-5 rounded-2xl ${index % 2 === 0 ? 'bg-slate-50' : 'bg-white'} hover:bg-red-50 transition-colors`}>
+                <span className="font-semibold text-lg text-slate-800">{item.service}</span>
+                <span className="text-3xl font-black text-blue-700">{item.price}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-slate-500 mt-6 italic text-center">
+            * Estos precios son orientativos para modelos estándar. Consúltanos para un presupuesto personalizado.
+          </p>
         </div>
+      </section>
 
-        <div class="bg-white p-6 rounded-3xl shadow-md border-l-8 border-purple-500">
-            <div class="flex items-center gap-4 mb-4">
-                <span class="text-5xl">📟</span>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900">Tablets</h3>
-                    <p class="text-gray-500 text-xs italic">Digitalizadores y Cristal</p>
-                </div>
-            </div>
-            <details class="group bg-purple-50 rounded-2xl">
-                <summary class="p-3 text-red-600 font-black cursor-pointer list-none flex justify-between items-center text-sm uppercase">
-                    <span><i class="fas fa-book-open mr-2"></i> VER PASO A PASO (7 PASOS)</span>
-                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <div class="p-4 border-t border-purple-100 space-y-2 text-gray-700 bg-white rounded-b-2xl text-xs">
-                    <p><b>1.</b> Calor 80°C. <b>2.</b> Separación cristal. <b>3.</b> Desbloqueo ZIF. <b>4.</b> Limpieza marco. <b>5.</b> Alcohol isopropílico. <b>6.</b> Pegado B-7000. <b>7.</b> Secado pinzas.</p>
-                </div>
-            </details>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-md border-l-8 border-orange-500">
-            <div class="flex items-center gap-4 mb-4">
-                <span class="text-5xl">📸</span>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900">Cámaras Digitales</h3>
-                    <p class="text-gray-500 text-xs italic">Ópticas y Sensores</p>
-                </div>
-            </div>
-            <details class="group bg-orange-50 rounded-2xl">
-                <summary class="p-3 text-red-600 font-black cursor-pointer list-none flex justify-between items-center text-sm uppercase">
-                    <span><i class="fas fa-book-open mr-2"></i> VER PASO A PASO (7 PASOS)</span>
-                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <div class="p-4 border-t border-orange-100 space-y-2 text-gray-700 bg-white rounded-b-2xl text-xs">
-                    <p><b>1.</b> Apertura PH000. <b>2.</b> Descarga flash. <b>3.</b> Desmontaje objetivo. <b>4.</b> Limpieza CMOS. <b>5.</b> Calibración zoom. <b>6.</b> Test bayoneta. <b>7.</b> Test enfoque.</p>
-                </div>
-            </details>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-md border-l-8 border-green-500">
-            <div class="flex items-center gap-4 mb-4">
-                <span class="text-5xl">🔊</span>
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900">Audio / Bluetooth</h3>
-                    <p class="text-gray-500 text-xs italic">Puertos y Membranas</p>
-                </div>
-            </div>
-            <details class="group bg-green-50 rounded-2xl">
-                <summary class="p-3 text-red-600 font-black cursor-pointer list-none flex justify-between items-center text-sm uppercase">
-                    <span><i class="fas fa-book-open mr-2"></i> VER PASO A PASO (7 PASOS)</span>
-                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <div class="p-4 border-t border-green-100 space-y-2 text-gray-700 bg-white rounded-b-2xl text-xs">
-                    <p><b>1.</b> Retirada rejillas. <b>2.</b> Acceso módulo BT. <b>3.</b> Desoldadura USB. <b>4.</b> Soldadura precisión. <b>5.</b> Test driver. <b>6.</b> Cambio Litio. <b>7.</b> Cierre hermético.</p>
-                </div>
-            </details>
-        </div>
     </div>
-
-    <section class="bg-white rounded-3xl shadow-xl overflow-hidden mb-16 border-2 border-blue-600">
-        <div class="bg-blue-600 p-4 text-center text-white font-bold uppercase tracking-widest text-sm">
-            Compromiso Cobacho Electro
-        </div>
-        <div class="p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div class="flex flex-col items-center">
-                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 text-blue-600 text-2xl">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4 class="font-bold text-lg mb-2 text-red-600">Servicios Premium</h4>
-                <p class="text-gray-600 text-sm italic">Ofrecemos nuestros mejores servicios</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 text-red-600 text-2xl">
-                    <i class="fas fa-history"></i>
-                </div>
-                <h4 class="font-bold text-lg mb-2 text-red-600">Experiencia</h4>
-                <p class="text-gray-600 text-sm italic">más de 5 años de experiencia</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 text-green-600 text-2xl">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h4 class="font-bold text-lg mb-2 text-red-600">Garantía Real</h4>
-                <p class="text-gray-600 text-sm italic">garantía de 3 meses nada más finalizada la venta/reparación.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="flex flex-col items-center justify-center gap-6 mb-20 text-center">
-        <svg class="w-24 h-24 drop-shadow-2xl" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FFD700" stroke="#EAB308" stroke-width="1"/>
-        </svg>
-        <h2 class="text-5xl font-black tracking-tighter leading-none">
-            <span class="text-red-600 uppercase">Cobacho</span><br><span class="text-blue-600 font-light">Electro</span>
-        </h2>
-    </div>
-
-    <footer class="text-center py-10 border-t border-gray-200 bg-white rounded-t-[3rem] shadow-2xl">
-        <p class="text-blue-900 font-bold mb-6 uppercase tracking-widest text-xs italic">Visita nuestros trabajos reales en:</p>
-        <div class="flex justify-center gap-4 md:gap-8 text-white">
-            <a href="https://www.instagram.com/" target="_blank" class="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-4 rounded-2xl shadow-lg hover:scale-110 transition-transform flex flex-col items-center w-20">
-                <i class="fab fa-instagram text-xl mb-1"></i><span class="text-[9px] font-bold uppercase tracking-tighter">Fotos</span>
-            </a>
-            <a href="https://www.tiktok.com/" target="_blank" class="bg-black p-4 rounded-2xl shadow-lg hover:scale-110 transition-transform flex flex-col items-center w-20">
-                <i class="fab fa-tiktok text-xl mb-1"></i><span class="text-[9px] font-bold uppercase tracking-tighter">Vídeos</span>
-            </a>
-            <a href="https://wa.me/34000000000" target="_blank" class="bg-green-500 p-4 rounded-2xl shadow-lg hover:scale-110 transition-transform flex flex-col items-center w-20">
-                <i class="fab fa-whatsapp text-xl mb-1"></i><span class="text-[9px] font-bold uppercase tracking-tighter">Chat</span>
-            </a>
-        </div>
-        <p class="text-[10px] text-gray-300 uppercase tracking-widest font-black mt-10 italic">© 2024 COBACHO ELECTRO • LABORATORIO TÉCNICO</p>
-    </footer>
-
-</body>
-</html>
+  );
+}
